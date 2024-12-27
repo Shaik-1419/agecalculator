@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);  /* Vibrant gradient background */
+    overflow: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Hover effect for container */
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="date"] {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+}
+
+input[type="date"]:focus {
+    border: 1px solid #0072ff; /* Focus effect with blue color */
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight raise on hover */
+}
+
+#ageResult {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#ageResult p {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#ageResult.visible {
+    visibility: visible;
+    opacity: 1; /* Smooth fade-in for result */
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    input[type="date"] {
+        font-size: 14px;
+    }
+}
